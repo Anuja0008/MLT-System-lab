@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Authentication/login'; // Make sure the Login component is correctly imported
-import Home1 from '../src/components/Home1/welcome';
+import Home1 from './components/Home1/welcome';
 import BookingForm from './components/Booking/BookingForm';
 import DoctorProfile from './components/Profile/profile';
 import Patientprofile from './components/Patient/patientprofile';
 import Appointments from './components/Profile/apppoinment';
 import Calculation from './components/Profile/Calculations';
 import BUN from '../src/components/Calculations/bun';
-
-
+import EGFR from './components/Calculations/egfr';
+import ForgetPassword from './components/Authentication/forgetpassword';
 
 const App = () => {
   return (
@@ -26,6 +26,8 @@ const App = () => {
       <Route path="/BookingForm" element={<BookingForm />} />
       <Route path="/Calculation" element={<Calculation />} />
       <Route path="/BUN" element={<BUN />} />
+      <Route path="/EGFR" element={<EGFR />} />
+      <Route path="/ForgetPassword" element={<ForgetPassword />} />
 
 
 

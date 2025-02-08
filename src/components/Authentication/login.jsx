@@ -218,7 +218,7 @@ const Login = () => {
 
           <div style={{ marginTop: "20px", textAlign: "center" }}>
             <Link
-              to="/signup"
+              to="/ForgetPassword"
               style={{
                 color: "#66a832",
                 textDecoration: "none",
@@ -226,7 +226,7 @@ const Login = () => {
                 fontFamily: "'Poppins', sans-serif",
               }}
             >
-              Don't have an account? Sign up
+              Forgot Password?
             </Link>
           </div>
         </form>

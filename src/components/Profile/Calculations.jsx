@@ -29,7 +29,7 @@ const Calculation = () => {
           <button className="button" onClick={() => navigate('/BUN')}>
             <FaCalculator style={{ marginRight: '8px' }} /> Blood Urea Nitrogen (BUN) to Creatinine Ratio
           </button>
-          <button className="button" onClick={() => navigate('/egfr')}>
+          <button className="button" onClick={() => navigate('/EGFR')}>
             <FaHeartbeat style={{ marginRight: '8px' }} /> Estimated Glomerular Filtration Rate (eGFR)
           </button>
           <button className="button" onClick={() => navigate('/insulin-dose')}>

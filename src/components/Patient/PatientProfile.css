@@ -5,17 +5,17 @@
   gap: 20px;
   padding: 20px;
   font-family: 'Poppins', sans-serif;
+  background-image: url('../../Photos/checkup2.jpg'); /* Replace with your actual image URL */
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-attachment: fixed; /* Keeps the image fixed while content scrolls */
+  min-height: 100vh; /* Ensures it covers the full viewport height */
+  width: 100%;
+  overflow: auto; /* Allows content to scroll while the background stays fixed */
 }
- body {
-  background-image: url('../../Photos/checkup1.jpg'); /* Replace with the path to your image */
-  background-size: cover; /* Ensure the image covers the full screen */
-  background-position: center; /* Center the image */
-  background-attachment: fixed; /* Keep the image fixed when scrolling */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  font-family: 'Poppins', sans-serif; /* Use Poppins font */
-  margin: 0; /* Remove default margin */
-  opacity: 1.9;
-} 
+
+
 .header-bar {
   width: 100%;
   display: flex;
@@ -30,7 +30,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  border-bottom: 4px solid #2c2b2b; 
+  border-bottom: 4px solid #b3aeae; 
 }
 
 .header-bar nav {

@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { db } from "../../firebase/db";
-import { collection, query, where, getDocs, addDoc } from "firebase/firestore";
+import { collection, query, where, getDocs, /*addDoc*/ setDoc, doc } from "firebase/firestore"; // Import setDoc and doc
 import "./bun.css"; // Importing external CSS
 import { useNavigate } from 'react-router-dom';
-
 
 const BUN = () => {
   const [patientEmail, setPatientEmail] = useState("");
   const [patientName, setPatientName] = useState("");
   const [bookDate, setBookDate] = useState("");
-  const [dob, setDob] = useState("");
+  const [/*dob*/, setDob] = useState("");
   const [age, setAge] = useState("");
   const [bun, setBun] = useState("");
   const [creatinine, setCreatinine] = useState("");
@@ -121,7 +120,8 @@ const BUN = () => {
         age: report.age,
       };
 
-      await addDoc(collection(db, "Reports"), reportData);
+      // Use setDoc to upload the report with the patient's email as the document ID
+      await setDoc(doc(db, "Reports", patientEmail), reportData);
       alert("Report uploaded successfully!");
     } catch (error) {
       console.error("Error uploading report: ", error);
@@ -145,7 +145,7 @@ const BUN = () => {
       <h2 className="title">Blood Urea Nitrogen Report Generator</h2>
 
       <div className="calculation-section">
-        <h3>Input Patient E-mail & Other Field  Filled Automaticaly </h3>
+        <h3>Input Patient E-mail & Other Field Filled Automatically</h3>
         <div className="form-container">
           <div className="form-group">
             <label className="label">Patient Email:</label>
@@ -205,8 +205,9 @@ const BUN = () => {
           <button onClick={generateReport} className="btn green-btn">Generate Report</button>
           <button onClick={clearFields} className="btn red-btn">Clear Fields</button>
           <button className="go-to-calculation-btn" onClick={() => navigate("/Calculation")}>
-    Go to Calculation
-</button>      </div>
+            Go to Calculation
+          </button>
+        </div>
       </div>
 
       {report && (
@@ -229,11 +230,6 @@ const BUN = () => {
           </div>
         </div>
       )}
-
-    
-
-      {/* Button to go to the calculation section */}
-     
     </div>
   );
 };

@@ -84,7 +84,7 @@ const PatientProfile = () => {
       <header className="header-bar">
         <h1>Patient Portal</h1>
         <nav>
-          <button onClick={() => navigate('/check-results')} className="nav-button1">Check Results</button>
+          <button onClick={() => navigate('/RESULT')} className="nav-button1">Check Results</button>
           <button onClick={() => {
             localStorage.removeItem("user");
             navigate('/login');
@@ -132,8 +132,8 @@ const PatientProfile = () => {
             required
           >
             <option value="">Select Test</option>
-            <option value="Blood Test">Blood Urea Nitrogen (BUN)</option>
-            <option value="X-Ray">Estimated Glomerular Filtration Rate (eGFR)</option>
+            <option value="Blood Urea Nitrogen">Blood Urea Nitrogen (BUN)</option>
+            <option value="Estimated Glomerular Filtration Rate">Estimated Glomerular Filtration Rate (eGFR)</option>
             <option value="MRI Scan">Insulin Dose Calculator</option>
             <option value="CT Scan">INR (International Normalized Ratio)</option>
             <option value="Lipid Profile">Lipid Profile Calculation</option>

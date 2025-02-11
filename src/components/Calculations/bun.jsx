@@ -83,7 +83,7 @@ const BUN = () => {
         : "Needs Attention";
 
     const requestDate = new Date().toLocaleDateString();
-    const testType = "Blood Urea Nitrogen (BUN) & Creatinine Test";
+    const testType = "Blood Urea Nitrogen ";
 
     setReport({
       patientName,

@@ -10,6 +10,7 @@ import Calculation from './components/Profile/Calculations';
 import BUN from '../src/components/Calculations/bun';
 import EGFR from './components/Calculations/egfr';
 import ForgetPassword from './components/Authentication/forgetpassword';
+import RESULT from './components/Patient/results';
 
 const App = () => {
   return (
@@ -28,6 +29,8 @@ const App = () => {
       <Route path="/BUN" element={<BUN />} />
       <Route path="/EGFR" element={<EGFR />} />
       <Route path="/ForgetPassword" element={<ForgetPassword />} />
+      <Route path="/RESULT" element={<RESULT />} />
+      
 
 
 

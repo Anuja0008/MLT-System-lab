@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../../firebase/db"; // Firebase config
 import { collection, query, where, getDocs, setDoc, doc } from "firebase/firestore";
-import "./egfr.css"; // Import the external CSS
+import './egfr.css' // Import the external CSS
 import { useNavigate } from "react-router-dom";
 
 const EGFR = () => {
@@ -134,8 +134,8 @@ const EGFR = () => {
     const reportId = `${patientEmail}_${randomSuffix}`;
 
     const reportData = {
-      name: patientName,
-      email: patientEmail,
+      patientName: patientName,
+      patientEmail: patientEmail,
       bookDate,
       age,
       gender,
